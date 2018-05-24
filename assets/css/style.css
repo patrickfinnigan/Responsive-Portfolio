@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+/* adding "box-sizing: border-box" to the page makes it so that the border and the padding are included in the total size of the div. This means that borders and padding will not increase the size of the div that we make outside of the determined size we made for it, allowing us to change it freely without having to worry about adjusting the content for size*/
+
+body {
+    font-size: 18px;
+    line-height: 34px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #777;
+    background: url(../images/memphis-colorful.png);
+}
+/* the body dictates what the entire document would look like. Keep in mind that the lower an element is along this document, the greater say it has in determining the look of a document. Think of later css elements nestling ontop of the older ones, obscuring them from view */
+
+.container {
+    width: 100%;
+    max-width:960px;
+    margin: 0 auto;
+    clear: both;
+}
+/*This part of the code dictates what every element within the "container" class will look like, on top of the "body" code. 
+In this part, it says that
+    -any element with this tag must take up the whole width of the page
+    -BUT up to a max width size of 960px
+    -the "margin 0 auto" says that the margins outside the 960px width can be any size, as long as they are automatically adjustable. this centers everyting
+    -the "clear:both" property is for */
+
+h1, h2, h3, p {
+    margin-bottom: 20px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: #4aaaa5;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 49px;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 20px;
+}
+
+h2, h3 {
+    font-size: 22px;
+}
+
+#masthead {
+    background: #fff;
+    margin: 0 0 30px;
+    z-index: 99;
+    color: fff;
+    overflow: auto;
+    border-bottom: 2px solid #ccc;
+    position: fixed;
+    width: 100%;
+}
+
+#logo {
+    width: 250px;
+    height: 90px;
+    background: #4aaaa5;
+    float: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 90px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+}
+/* notice how the logo is an id, so things like the font family are overwritten by the main body format*/
+
+nav {
+    float: right;
+    margin-top: 25px;
+}
+
+nav a {
+    color: #999999;
+    text-decoration: none;
+    margin-left: 15px;
+    display: inline-block; /* display: inline-block is meant to chage the display default to change their position from being on top of eachother to laying next to eachother if they have enough room */
+    border-left: 1px solid #efefef;
+    padding-left: 15px;
+    line-height: 18px;
+}
+/* the border-left, padding-left, and line-height are how you would make the lines that separate the tabs on the navigation bar */
+
+nav a:first-child {
+    border-left: 0 none;
+}
+/* first-child refers to the first element present in a set of elements, in this case the "About" element in the nav a block on every page. this command tells the pages not to give the About element any borders */
+
+#main-container {
+    padding-top: 130px;
+}
+
+.main-section {
+    background: #fff;
+    padding: 30px;
+    margin: 0 0 40px 0;
+    width: 100%;
+    max-width: 650px;
+    float: left;
+    border: 1px solid #ddd;
+}
+
+.auth-image {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    float: left;
+    margin-right: 25px;
+}
+
+.sidebar {
+    background: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 270px;
+    float: right;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+h3, .sidebar, h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 22px;
+}
+
+.social {
+    width: 62px;
+    height: 62px;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+.social:last-child {
+    margin-right: 0;
+}
+
+footer {
+    background: #666;
+    color: #fff;
+    padding: 30px 0;
+    clear: both;
+    border-top: 8px solid #4aaaa5;
+    color: #ccc;
+    font-size: 12px;
+    text-align: center;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0%;
+    width: 100%;
+}
+
+.work {
+    width: 274px;
+    overflow: auto;
+    position: relative;
+    float: left;
+    margin: 20px 0 25px;
+}
+
+.work:nth-child(even) {
+    margin-right: 40px;
+}
+
+/* down here, you can see that we can select particular file types within css classes themselves! */
+.work img {
+    width: 100%;
+    border: 0 none;
+    opacity: .8;
+}
+
+.work h3 {
+    border-bottom: 0;
+    background: #4aaaa5;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    padding: 15px;
+    width: 100%;
+    line-height: 30px;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+#contact-form ul {
+    margin-bottom: 20px;
+}
+
+#contact-form li {
+    margin-bottom: 10px;
+}
+
+label,
+input[type=text],
+input[type=email],
+textarea {
+    display: block;
+    width: 100%;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    height: 35px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 200px;
+}
+
+input[type=submit] {
+    background: #4aaaa5;
+    border: 0 none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        overflow: hidden;
+    }
+
+    #logo {
+        margin-left: 20px;
+    }
+
+    .main-section { 
+        margin-left: 20px;
+    }
+
+    .sidebar {
+        visibility: collapse;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .main-section {
+        max-width: 95%;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #logo {
+        width: 100%;
+        margin-left: 0px;
+
+    }
+
+    nav {
+        float: left;
+        text-align: justify;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    
+    nav a {
+        color: #999999;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 20px;
+        display: inline-table; /* display: inline-block is meant to chage the display default to change their position from being on top of eachother to laying next to eachother if they have enough room */
+        border-left: 1px solid #efefef;
+        padding-left: 25px;
+    }
+
+    .main-section {
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
