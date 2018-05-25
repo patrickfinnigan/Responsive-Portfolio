@@ -12,7 +12,7 @@ body {
 }
 /* the body dictates what the entire document would look like. Keep in mind that the lower an element is along this document, the greater say it has in determining the look of a document. Think of later css elements nestling ontop of the older ones, obscuring them from view */
 
-.container {
+.container .container-head{
     width: 100%;
     max-width:960px;
     margin: 0 auto;
@@ -159,7 +159,7 @@ footer {
     position: sticky;
     left: 0;
     bottom: 0;
-    margin-bottom: 0%;
+    margin-bottom: 0px auto;
     width: 100%;
 }
 
@@ -236,7 +236,7 @@ input[type=submit] {
 
 @media screen and (max-width: 980px) {
     body {
-        overflow: hidden;
+        
     }
 
     #logo {
@@ -268,13 +268,16 @@ input[type=submit] {
 
     }
 
+    .container-head {
+        text-align: center;
+    }
+
     nav {
-        float: left;
-        text-align: justify;
-        margin-top: 10px;
+        margin-top: 0px;
         margin-bottom: 10px;
-        margin-right: 5%;
-        margin-left: 5%;
+        margin-right: auto;
+        margin-left: auto;
+        float: none;
     }
     
     nav a {
@@ -285,6 +288,8 @@ input[type=submit] {
         display: inline-table; /* display: inline-block is meant to chage the display default to change their position from being on top of eachother to laying next to eachother if they have enough room */
         border-left: 1px solid #efefef;
         padding-left: 25px;
+        margin-top: 15px;
+        
     }
 
     .main-section {
