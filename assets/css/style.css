@@ -12,7 +12,14 @@ body {
 }
 /* the body dictates what the entire document would look like. Keep in mind that the lower an element is along this document, the greater say it has in determining the look of a document. Think of later css elements nestling ontop of the older ones, obscuring them from view */
 
-.container .container-head{
+.container {
+    width: 100%;
+    max-width:960px;
+    margin: 0 auto;
+    clear: both;
+}
+
+.container-head {
     width: 100%;
     max-width:960px;
     margin: 0 auto;
@@ -161,6 +168,7 @@ footer {
     bottom: 0;
     margin-bottom: 0px auto;
     width: 100%;
+    position: sticky;
 }
 
 .work {
